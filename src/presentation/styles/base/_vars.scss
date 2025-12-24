@@ -1,0 +1,34 @@
+@use 'sass:map';
+
+
+$home-colors: (
+    background: #F6F6F6,
+    text: #000000,
+    header: #000000,
+);
+
+
+$sidebar-colors: (
+    text: #FFFFFF,
+    background: #242424,
+    tabsBackground: #4A4A4A,
+    activeTabLightColor: #646464,
+    activeTabDarkColor: #3C3C3C,
+);
+
+$dashboard-colors: (
+    accentColor: #363535,
+    background: #FFFFFF,
+);
+
+@function home-colors($key) {
+    @return map.get($home-colors, $key);
+}
+
+@function sidebar-colors($key) {
+    @return map.get($sidebar-colors, $key);
+}
+
+@function dashboard-colors($key) {
+    @return map.get($dashboard-colors, $key);
+}

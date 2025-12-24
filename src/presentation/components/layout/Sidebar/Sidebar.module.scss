@@ -1,0 +1,46 @@
+@use '@vars' as variables;
+
+
+.container {
+    width: 60px;
+    height: calc(100vh - 8px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 15px;
+
+    border-radius: 7px;
+    background-color: variables.sidebar-colors(background);
+    color: variables.sidebar-colors(text);
+}
+
+.tabs {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.tabsItem {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+
+}
+
+.tabsItem.active {
+    box-shadow:
+        inset 0 1px 0 0 variables.sidebar-colors(activeTabLightColor),  // top color
+        inset 0 -1px 0 0 variables.sidebar-colors(activeTabDarkColor);  // bottom color
+    background-color: variables.sidebar-colors(tabsBackground);
+}
+
+.logOut {
+    margin-top: auto;
+    margin-bottom: 25px;
+}

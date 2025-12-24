@@ -1,0 +1,65 @@
+@use '@vars' as variables;
+
+.container {
+    width: 1200px;
+    min-width: 900px;
+    margin: 40px 5px;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.dashboardTitle {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 35px;
+}
+
+.searchContainer {
+    display: inline;
+    padding: 10px;
+    border: 1px solid variables.dashboard-colors(accentColor);
+    border-radius: 8px;
+}
+
+.searchContainer label {
+    margin-right: 10px;
+}
+
+.searchContainer input {
+    font-size: 14px;
+    font-weight: 600;
+    width: 480px;
+
+    &::placeholder {
+        color: variables.dashboard-colors(accentColor);
+    }
+}
+
+.filterContainer {
+    font-size: 14px;
+    font-weight: 600;
+    color: variables.dashboard-colors(accentColor);
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.saved {
+    margin: 40px 0;
+    padding: 15px 15px 10px;
+    width: 1200px;
+    min-width: 900px;
+    height: 320px;
+    background-color: variables.dashboard-colors(background);
+    border-radius: 15px;
+    box-shadow: 0 2px 8px #36353516;
+}
+
+.savedTitle {
+    font-size: 20px;
+    font-weight: 600;
+}
